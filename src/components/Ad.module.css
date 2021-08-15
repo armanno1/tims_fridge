@@ -1,0 +1,14 @@
+.adGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+
+.adLink {
+    border: none;
+}
+
+.adGrid > a:link, .adGrid > a:visited {
+    border: none;
+    style: none;
+}

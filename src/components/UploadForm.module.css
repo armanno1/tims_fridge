@@ -1,0 +1,80 @@
+:root {
+    --select-border: #2c3e50;
+    --select-focus: blue;
+    --select-arrow: var(--select-border);
+  }
+
+.Modal {
+    background-color: #FFF;
+    padding: 5%;
+    margin: 5%;
+    border-radius: 1rem;
+    opacity: 100%;
+}
+
+.Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 62, 80, 0.5);
+}
+
+.closeModal {
+    float: right;
+    width: 30px;
+    height: 30px;
+}
+
+.updateAdNumber {
+    padding: 15px 20px;
+    margin: 0 auto;
+    background-color: #EFEFEF;
+    color: #2c3e50;
+    border-radius: 0.25rem;
+    font-size: 1rem; 
+}
+
+.numberInput {
+/* resets the select el */
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+.numberInput {
+    width: 50px;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 15px;
+    line-height: 1.2;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+
+.submitButton {
+    border-radius: 0.25em;
+    padding: .5em 1em;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    background: #2ecc71;
+    border: none;
+}
+
+.submitButton:disabled {
+    background: #DDD;
+}
