@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import UploadForm from './UploadForm';
 import styles from './Dashboard.module.css';
 import UrlInput from './UrlInput';
+import fridgeNumbers from '../assets/fridge_numbers.png'
 
 const Dashboard = ({ dashVisible, hideDash, urlArray }) => {
 
@@ -14,6 +15,7 @@ const Dashboard = ({ dashVisible, hideDash, urlArray }) => {
         <div>
             <div style={{color: '#2c3e50', paddingBottom: '20px', fontWeight: 'bold', fontSize: '1.25rem'}}>Front Door Images</div>
             <div style={{color: '#AAA', paddingBottom: '20px', fontSize: "0.8rem"}}>Select a front door ad to update from the drop down.</div>
+            <img src={fridgeNumbers} alt="fridge number layout" style={{width: '100px', marginBottom: '20px'}}/>
             <UploadForm adToUpdate={adToUpdate} setAdToUpdate={setAdToUpdate} />
         </div>
     );
