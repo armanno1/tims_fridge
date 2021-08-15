@@ -21,6 +21,7 @@
     display: grid;
     grid-template-columns: 200px 1fr;
     overflow-y: scroll;
+    text-align: left;
 }
 
 .closeButton {
