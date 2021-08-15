@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { projectFirestore } from '../firebase/config';
+import styles from './UrlInput.module.css'
 
 const UrlInput = ({urlNo, urlString, className}) => {
 
@@ -23,7 +24,7 @@ const UrlInput = ({urlNo, urlString, className}) => {
                     <div style={{display: "inline-block", width: '30px', fontFamily: 'monospace', color: "#CCC"}}>{urlNo}</div>
                     <input type="text" value={url} onChange={handleChange}></input>
                 </label>
-                <input type="submit" value="Update"></input>
+                <input type="submit" value="Update" className={styles.submitButton}></input>
             </form>
         </div>
     )

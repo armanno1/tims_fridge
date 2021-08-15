@@ -36,7 +36,7 @@ function App() {
       <div className="container">
         <Fridge images={images} urlArray={urlArray} />
         <div style={{textAlign: 'center', padding: '10px 0 0 0'}}>
-          {isSignedIn ? <div style={{display: 'inline-block', color: 'white', fontWeight: 'bold', cursor: 'pointer'}} onClick={showDash}>Open Dashboard! ⚡</div> : <div style={{color: 'white', fontSize: ".9em", fontWeight: 'normal'}}>Own this fridge? <span onClick={() => setShowLoginModal(true)} style={{cursor: 'pointer', fontWeight: 'bold'}}>Login</span></div> }
+          {isSignedIn ? <div style={{display: 'inline-block', color: 'white', fontWeight: 'bold', cursor: 'pointer', backgroundColor: 'rgba(0, 98, 102,1.0)', padding: '8px 18px', borderRadius: '5px'}} onClick={showDash}>Open Dashboard! ⚡</div> : <div style={{color: 'white', fontSize: ".9em", fontWeight: 'normal'}}>Own this fridge? <span onClick={() => setShowLoginModal(true)} style={{cursor: 'pointer', fontWeight: 'bold'}}>Login</span></div> }
           <SignInScreen isSignedIn={isSignedIn} showLoginModal={showLoginModal} setShowLoginModal={setShowLoginModal} />
           <Dashboard showDash={showDash} hideDash={hideDash} dashVisible={dashVisible} images={images} urlArray={urlArray} />
         </div>
