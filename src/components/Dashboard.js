@@ -8,8 +8,6 @@ const Dashboard = ({ dashVisible, hideDash, urlArray }) => {
     const [adToUpdate, setAdToUpdate] = useState(1);
     const [showDashContents, setShowDashContents] = useState('updateFrontAds');
 
-    //make an array of length 60 and populate it with 60 links (so I can use indexes to add/update)
-
     const updateFrontAdsJSX = (
         <div>
             <div style={{color: '#2c3e50', paddingBottom: '20px', fontWeight: 'bold', fontSize: '1.25rem'}}>Change an Ad image</div>
@@ -34,7 +32,7 @@ const Dashboard = ({ dashVisible, hideDash, urlArray }) => {
             <div className={styles.backdrop}>
                 <div className={styles.dashboard}>
                     <div className={styles.closeButton} onClick={hideDash}>
-                        Close ❌
+                        ╳
                     </div>
                     <div className={styles.leftMenu}>
                         <div className={styles.leftMenuPad}>

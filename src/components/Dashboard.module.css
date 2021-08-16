@@ -26,9 +26,10 @@
 
 .closeButton {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 15px;
+    right: 20px;
     cursor: pointer;
+    padding: 5px;
 }
 
 .leftMenu {
