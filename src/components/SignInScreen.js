@@ -1,6 +1,6 @@
 import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import { uiConfig } from '../firebase/config';
 import styles from './SignInScreen.module.css';
 

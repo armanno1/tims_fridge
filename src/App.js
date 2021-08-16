@@ -3,7 +3,7 @@ import Fridge from './components/Fridge';
 import Dashboard from './components/Dashboard';
 import useFirestore from './hooks/useFirestore';
 import SignInScreen from './components/SignInScreen';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 
 function App() {
 
