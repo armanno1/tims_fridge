@@ -40,6 +40,7 @@ function App() {
           <SignInScreen isSignedIn={isSignedIn} showLoginModal={showLoginModal} setShowLoginModal={setShowLoginModal} />
           <Dashboard showDash={showDash} hideDash={hideDash} dashVisible={dashVisible} images={images} urlArray={urlArray} />
         </div>
+        <div className="floor"></div>
       </div>
     </>
   );
