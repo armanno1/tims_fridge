@@ -11,6 +11,8 @@ const Fridge = ({images, urlArray}) => {
     //its vicious and nasty code
     const topDoorAds = [...Array(6)];
     const bottomDoorAds = [...Array(15)];
+    const insideTopAds = [...Array(19)];
+    const insideBottomAds = [...Array(25)];
 
     for(let i=0; i<images.length; i++) {
         //const imageNo = Number(images[i].id[0]); //here's the error! it takes just the FIRST number, what about double digits!!
@@ -22,19 +24,22 @@ const Fridge = ({images, urlArray}) => {
         } else {
             imageNo = Number(imageSubstring);
         }
-        if(imageNo <= 6) {
+        if(imageNo <= 6) { //6 images in topDoorAds
             if (images[i].url) topDoorAds[imageNo-1] = (images[i].url)
-        } else if (imageNo > 6 && imageNo <= 15) {
+        } else if (imageNo > 6 && imageNo <= 15) { // 9 images in bottomDoorAds
             if (images[i].url) bottomDoorAds[imageNo-1] = (images[i].url)
+        } else if (imageNo > 15 && imageNo <= 19) { //4 images in insideTopAds
+            if (images[i].url) insideTopAds[imageNo-1] = (images[i].url)
+        } else if (imageNo > 19 && imageNo <= 25) { // 6 images in insideBottomAds
+            if (images[i].url) insideBottomAds[imageNo-1] = (images[i].url)
         }
-
     }    
     
     return (
         <div>
             <div className="above-fridge"></div>
-            <TopDoor isTopOpen={isTopOpen} setIsTopOpen={setIsTopOpen} images={topDoorAds} urlArray={urlArray}/> 
-            <BottomDoor isBottomOpen={isBottomOpen} setIsBottomOpen={setIsBottomOpen} images={bottomDoorAds} />
+            <TopDoor isTopOpen={isTopOpen} setIsTopOpen={setIsTopOpen} images={topDoorAds} urlArray={urlArray} insideTopAds={insideTopAds}/> 
+            <BottomDoor isBottomOpen={isBottomOpen} setIsBottomOpen={setIsBottomOpen} images={bottomDoorAds} insideBottomAds={insideBottomAds}/>
             <div className="underneath-fridge">
                 <div className="disclaimer">Image take from timwrite.com/fridge, who retains copyright. For private demonstration purposes only</div>
             </div> 

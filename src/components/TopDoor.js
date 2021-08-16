@@ -1,7 +1,7 @@
 import React from 'react';
 import Ad from './Ad';
 
-const TopDoor = ({ isTopOpen, setIsTopOpen, images, urlArray }) => {
+const TopDoor = ({ isTopOpen, setIsTopOpen, images, urlArray, insideTopAds }) => {
 
     const toggleTopOpen = () => {
         setIsTopOpen(!isTopOpen);
@@ -24,7 +24,16 @@ const TopDoor = ({ isTopOpen, setIsTopOpen, images, urlArray }) => {
                 <Ad imageUrl={images[5]} number="6" urls={urlArray.slice(20, 24)} />
             </div>
         </div>
-        <div className="bg" onClick={toggleTopOpen}></div>
+        <div className="bg" onClick={toggleTopOpen}>
+            <div className="top-inside-top-row">
+                <Ad imageUrl={insideTopAds[15]} number="16" />
+                <Ad imageUrl={insideTopAds[16]} number="17" />
+            </div>
+            <div className="top-inside-bottom-row">
+                <Ad imageUrl={insideTopAds[17]} number="18" />
+                <Ad imageUrl={insideTopAds[18]} number="19" />
+            </div>
+        </div>
     </div>
     )
 };

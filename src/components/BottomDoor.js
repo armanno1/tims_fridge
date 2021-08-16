@@ -1,7 +1,7 @@
 import React from 'react';
 import Ad from './Ad';
 
-const BottomDoor = ({ isBottomOpen, setIsBottomOpen, images }) => {
+const BottomDoor = ({ isBottomOpen, setIsBottomOpen, images, insideBottomAds }) => {
     
     const toggleBottomOpen = () => {
         setIsBottomOpen(!isBottomOpen);
@@ -30,6 +30,18 @@ const BottomDoor = ({ isBottomOpen, setIsBottomOpen, images }) => {
             </div>
         </div>
         <div className="bg" onClick={toggleBottomOpen}>
+            <div className="bottom-inside-top-row">
+                <Ad imageUrl={insideBottomAds[19]} number="20" />
+                <Ad imageUrl={insideBottomAds[20]} number="21" />
+            </div>
+            <div className="bottom-inside-middle-row">
+                <Ad imageUrl={insideBottomAds[21]} number="22" />
+                <Ad imageUrl={insideBottomAds[22]} number="23" />
+            </div>
+            <div className="bottom-inside-bottom-row">
+                <Ad imageUrl={insideBottomAds[23]} number="24" />
+                <Ad imageUrl={insideBottomAds[24]} number="25" />
+            </div>
         </div>
     </div>
     )

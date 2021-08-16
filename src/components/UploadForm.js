@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ProgressBar from './ProgressBar';
 import styles from './UploadForm.module.css';
+import fridgeNumbers from '../assets/fridge_numbers.png';
 
 const UploadForm = (props) => {
 
@@ -12,7 +13,7 @@ const UploadForm = (props) => {
     const [adNumberToUpdate, setAdNumberToUpdate] = useState("1");
 
     //number of ads
-    const totalAds = 15;
+    const totalAds = 25;
 
     //change handlers (for picking the ad to change and handling file upload)
 
@@ -26,6 +27,8 @@ const UploadForm = (props) => {
     const fileChangeHandler = (e) => {
         const selectedFile = e.target.files[0]; //not e.target.value!!
         const types = ["image/png", "image/jpeg"];
+        const size = e.target.files[0].size;
+        console.log(size)
         if (selectedFile && types.includes(selectedFile.type)) {
             setTemporaryFile(selectedFile);
             setError(null);
@@ -43,26 +46,37 @@ const UploadForm = (props) => {
 
     const selectAdJSX = (
         <select className={styles.numberInput} defaultValue={adNumberToUpdate} onChange={selectAdChangeHandler}>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
+            <option value="1">Top Door: 1</option>
+            <option value="2">Top Door: 2</option>
+            <option value="3">Top Door: 3</option>
+            <option value="4">Top Door: 4</option>
+            <option value="5">Top Door: 5</option>
+            <option value="6">Top Door: 6</option>
+            <option value="7">Bottom Door: 7</option>
+            <option value="8">Bottom Door: 8</option>
+            <option value="9">Bottom Door: 9</option>
+            <option value="10">Bottom Door: 10</option>
+            <option value="11">Bottom Door: 11</option>
+            <option value="12">Bottom Door: 12</option>
+            <option value="13">Bottom Door: 13</option>
+            <option value="14">Bottom Door: 14</option>
+            <option value="15">Bottom Door: 15</option>
+            <option value="16">Inside Top: 16</option>
+            <option value="17">Inside Top: 17</option>
+            <option value="18">Inside Top: 18</option>
+            <option value="19">Inside Top: 19</option>
+            <option value="20">Inside Bottom: 20</option>
+            <option value="21">Inside Bottom: 21</option>
+            <option value="22">Inside Bottom: 22</option>
+            <option value="23">Inside Bottom: 23</option>
+            <option value="24">Inside Bottom: 24</option>
+            <option value="25">Inside Bottom: 25</option>
         </select>
     )
 
     return (
             <div style={{textAlign: "center"}}>
+                <img src={fridgeNumbers} alt="fridge ad number layout" style={{width: '150px', marginBottom: '20px', opacity: '0.6'}}/>
                 <form onSubmit={submitHandler}>
                     <div className={styles.updateAdNumber}>
                         Update adspace {selectAdJSX}

@@ -52,7 +52,7 @@
 }
 
 .numberInput {
-    width: 50px;
+    width: 150px;
     border: 1px solid var(--select-border);
     border-radius: 0.25em;
     padding: 0.25em 0.5em;

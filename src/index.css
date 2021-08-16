@@ -136,6 +136,22 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.top-inside-top-row, .top-inside-bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 50%;
+  padding: 0px 100px;
+  grid-gap: 10px;
+}
+
+.bottom-inside-top-row, .bottom-inside-middle-row, .bottom-inside-bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 33%;
+  padding: 0px 100px;
+  grid-gap: 10px;
+}
+
 .top-door-handle-container {
   display: grid;
   grid-template-columns: 50px 1fr;
